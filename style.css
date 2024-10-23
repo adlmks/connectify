@@ -211,6 +211,7 @@ main .container .left .profile {
     cursor: pointer;
     transition: all 300ms ease;
     position: relative;
+    color: white;
 }
 
 .left .sidebar .menu-item:hover {
