@@ -172,12 +172,12 @@ const changeBG = () => {
 };
 
 // Load background settings from local storage
-const loadBackgroundSettings = () => {
-    lightColorLightness = localStorage.getItem('lightColorLightness') || '95%'; // Default value
-    whiteColorLightness = localStorage.getItem('whiteColorLightness') || '100%'; // Default value
-    darkColorLightness = localStorage.getItem('darkColorLightness') || '17%'; // Default value
-    changeBG();
-};
+// const loadBackgroundSettings = () => {
+//     lightColorLightness = localStorage.getItem('lightColorLightness') || '95%'; // Default value
+//     whiteColorLightness = localStorage.getItem('whiteColorLightness') || '100%'; // Default value
+//     darkColorLightness = localStorage.getItem('darkColorLightness') || '17%'; // Default value
+//     changeBG();
+// };
 
 Bg1.addEventListener('click', () => {
     // add active class
