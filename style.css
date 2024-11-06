@@ -145,25 +145,6 @@ nav .create {
     gap: 2rem;
 }
 
-nav .btn-danger {
-    display: inline-block;
-    padding: var(--btn-padding);
-    font-weight: 500;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: all 300ms ease;
-    font-size: 0.9rem;
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-}
-
-nav .btn-danger:hover {
-    background-color: #c0392b;
-}
-
-
-
 
 /* =========== Main =========== */
 main {
