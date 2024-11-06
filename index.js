@@ -236,6 +236,21 @@ Bg3.addEventListener('click', () => {
     localStorage.setItem('darkColorLightness', darkColorLightness);
 });
 
+// Post button
+document.getElementById('postButton').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const sound = document.getElementById('sound');
+    sound.play();
+
+    const message = document.getElementById('post-message');
+    message.style.display = 'block';
+
+    setTimeout(function() {
+        message.style.display = 'none';
+    }, 3500);
+});
+
 // Load color settings from local storage
 const loadColorSettings = () => {
     const savedPrimaryHue = localStorage.getItem('primaryHue') || 252; // Default value
