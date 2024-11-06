@@ -274,3 +274,28 @@ window.addEventListener('load', () => {
     loadBackgroundSettings();
     loadColorSettings();
 });
+
+if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(
+        (position) => {
+            const { latitude, longitude } = position.coords;
+            
+            // Используем внешнее API, например, OpenStreetMap или Google Maps, чтобы получить город/страну по координатам
+            fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`)
+                .then(response => response.json())
+                .then(data => {
+                    // Отображаем название города и страны
+                    const locationElement = document.getElementById('location');
+                    locationElement.textContent = `${data.address.city}, ${data.address.country}`;
+                })
+                .catch(error => {
+                    console.error('Error getting location:', error);
+                });
+        },
+        (error) => {
+            console.error('Couldn not get the location:', error);
+        }
+    );
+} else {
+    console.error("Geolocation API не поддерживается в этом браузере.");
+}
