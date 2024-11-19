@@ -162,5 +162,5 @@ form.addEventListener('submit', e => {
 });
 
 goToIndexButton.addEventListener('click', () => {
-    window.location.href = '/Users/adilmaxutov/Desktop/Astana IT Univeristy/Web Technologies (Frond-End)/My social media/index.html';
+    window.location.href = 'http://adlmks.github.io/connectify/';
 });
